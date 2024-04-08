@@ -6,10 +6,10 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: Create_git_repo
-        identifier: Create_git_repo
+        name: Build
+        identifier: Build
         description: ""
-        type: Custom
+        type: CI
         spec:
           platform:
             os: Linux
@@ -20,7 +20,7 @@ pipeline:
           execution:
             steps:
               - step:
-                  type: ShellScript
+                  type: Run
                   name: create git repo
                   identifier: create_git_repo
                   spec:
